@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@use './app/styles' as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+h1,h2{
+    @extend .public-sans-heavy;
+}
+
+h4, h5 {
+    @extend .public-sans-light;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+    @extend .public-sans;
+}
+
+h4 {
+    font-size :24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.logo-image {
+    height: 48px;
+    margin-right: 12px;
+}
+
+p {
+    font-size: 18px;
+    @extend .public-sans;
+}

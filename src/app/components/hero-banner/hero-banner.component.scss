@@ -1,0 +1,55 @@
+@use '../../styles/' as *;
+
+.hero-banner__container {
+    width: 100%;
+    height: 80vh;
+    background-color: $very-light-gray;
+    @include flexCenter();
+    overflow: hidden;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    @include flexCenter-Y();
+    justify-content: space-between;
+    position: relative;
+
+    .hero-text__container {
+
+        max-width: 600px;
+        
+        h1 {
+            color: $dark-blue;
+            margin: 0px;
+        }
+
+        h4 {
+            color: $grayish-blue;
+            line-height: 2.2rem;
+        }
+        
+    }
+
+    .hero-banner-image {
+        position: absolute;
+        right: -15%;
+        top: 50%;
+        transform: translate(50%,-50%);
+        z-index: 0;
+    }
+
+    .hero-image__container {
+        z-index: 1;
+        object-fit: contain;
+        height: 600px;
+        width: 600px;
+
+        .hero-phone-image {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

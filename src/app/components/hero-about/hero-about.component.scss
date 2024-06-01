@@ -1,0 +1,68 @@
+@use '../../styles/' as *;
+
+.hero-about__container {
+    width: 100%;
+    height: 80vh;
+    background-color: $light-grayish-blue;
+    @include flexCenter();
+    overflow: hidden;
+}
+
+.hero-about {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    @include flexCenter();
+    flex-direction: column;
+    position: relative;
+
+    h2 {
+        margin-bottom: 100px;
+    }
+
+    .hero-about-bulletin__container {
+        width: 100%;
+        @include flexCenter-Y();
+        flex-direction: row;
+        justify-content: space-between;
+
+        .hero-about-bulletin {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 20%;
+            height: 400px;
+            text-align: start;
+
+            .bulletin-logo__container {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: $base-gradient;
+                @include flexCenter();
+                margin-bottom: 48px;
+
+                .bulletin-logo {
+                    width: 80%;
+                    height: 80%;
+                    object-fit: contain;
+                }
+            }
+
+            .bulletin-text__container {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+                h4 {
+                    margin: 0;
+                }
+
+                h5 {
+                    color: $grayish-blue;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+    }
+}
