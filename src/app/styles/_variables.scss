@@ -8,6 +8,7 @@ $very-light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
 $base-gradient: linear-gradient(to right, $lime-green, $bright-cyan);
+$active-gradient: linear-gradient(to right, $bright-cyan, $lime-green);
 
 .public-sans-light {
     font-family: "Public Sans", sans-serif;

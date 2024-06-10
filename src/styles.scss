@@ -45,3 +45,7 @@ p {
     font-size: 18px;
     @extend .public-sans;
 }
+
+li {
+    @extend .public-sans-light;
+}

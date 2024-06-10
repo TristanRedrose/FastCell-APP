@@ -1,0 +1,80 @@
+@use "../../styles/" as *;
+
+.hero-shop__container {
+    width: 100%;
+    min-height: 80vh;
+    background-color: $light-grayish-blue;
+    @include flexCenter();
+
+    .hero-shop {
+        width: 1440px;
+        @include flexCenter();
+        flex-direction: column;
+        margin-bottom: 60px;
+
+        h2 {
+            margin-bottom: 70px
+        }
+
+        .shop-info__container {
+            width: 100%;
+            @include flexCenter-Y();
+            justify-content: space-between;
+
+            .shop-image__container {
+                width: 30%;
+                height: 450px;
+
+                .shop-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .hero-shop-text__container {
+                max-width: 800px;
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        margin-bottom: 8px;
+                        line-height: 1.6rem;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        :nth-child(3) {
+            flex-direction: row-reverse;
+        }
+
+        .hero-shop-button__container {
+            width: 100%;
+            @include flexCenter();
+            margin-top: 40px;
+
+            .hero-shop-button {
+                padding: 8px 16px;
+                border-radius: 16px;
+                background: $base-gradient;
+
+                h4 {
+                    color: snow;
+                    margin: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background: $active-gradient;
+                    transition: 1s ease-in-out;
+                }
+            }
+        }
+    }
+}
