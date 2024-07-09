@@ -28,6 +28,11 @@
                 @include flexCenter-Y();
                 color: $very-light-gray;
                 @extend .public-sans-heavy;
+                width: fit-content;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             .social-links {
@@ -53,8 +58,6 @@
                         display: none;
                     }
                 }
-
-                
             }
         }
 
@@ -72,7 +75,6 @@
             li {
                 width: fit-content;
                 margin-bottom: 16px;
-                font-size: 14px;
                 transition: 0.3s ease-in-out;
 
                 &:hover {
@@ -93,4 +95,81 @@
         }
 
     }
+}
+
+@media only screen and (max-width: 940px) {
+
+    .footer-container {
+        
+        footer {
+
+            padding: 0;
+
+            .social-container {
+                width: 25%;
+            }
+            
+            .nav-container {
+                width: 15%;
+            }
+        
+            .business-container {
+                width: 40%;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 760px) {
+
+    .footer-container {
+        height: fit-content;
+        footer {
+
+            flex-direction: column;
+            
+            .social-container {
+                width: fit-content;
+                margin-bottom: 16px;
+
+                .logo-container {
+                    justify-content: center;
+                }
+                
+                .social-links {
+                    display: flex;
+                    column-gap: 12px;
+
+                    li {
+                        margin: 0;
+                    }
+                }
+            }
+            
+            .nav-container {
+                width: fit-content;
+                margin-bottom: 16px;
+
+                .nav-links {
+                    display: flex;
+                    margin: 0;
+                    column-gap: 12px;
+                }
+
+                li {
+                    
+                    
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        
+            .business-container {
+                width: fit-content;
+            }
+        }
+    }
+    
 }

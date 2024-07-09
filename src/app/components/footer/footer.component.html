@@ -1,7 +1,7 @@
 <div class="footer-container">
     <footer>
         <div class="social-container">
-            <div class="logo-container">
+            <div class="logo-container" (click)="goToPage('')">
                 <img class="logo-image" src="../../../assets/images/CellLogoBlue.png">
                 <h3>fastcell</h3>
             </div>
@@ -30,16 +30,16 @@
         </div>
         <div class="nav-container">
             <ul class="nav-links">
-                <li>O nama</li>
-                <li>Kontakt</li>
-                <li>Cijene</li>
+                <li (click)="goToPage('about')"><p>O nama</p></li>
+                <li><p>Kontakt</p></li>
+                <li><p>Cijene</p></li>
             </ul>
         </div>
         <div class="nav-container">
             <ul class="nav-links">
-                <li>Karijere</li>
-                <li>Podrška</li>
-                <li>Polica privatnosti</li>
+                <li><p>Karijere</p></li>
+                <li><p>Podrška</p></li>
+                <li><p>Polica privatnosti</p></li>
             </ul>
         </div>
         <div class="business-container">
