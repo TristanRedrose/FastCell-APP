@@ -6,60 +6,64 @@
     @include flexCenter();
     flex-direction: row;
     color: $grayish-blue;
-    
-    .nav-logo__container {
-        color: $dark-blue;
-        @include flexCenter();
+}
 
-        h3 {
-            @extend .public-sans-heavy;
-        }
+.nav-logo__container {
+    color: $dark-blue;
+    @include flexCenter();
 
-        &:hover {
-            cursor: pointer;
-        }
+    h3 {
+        @extend .public-sans-heavy;
     }
 
-    .navbar {
-        max-width: 1440px;
-        width: 100%;
-        height: 80px;
-        padding: 0px 16px;
-        @include flexCenter-Y();
-        justify-content: space-between;
-        @extend .public-sans;
+    &:hover {
+        cursor: pointer;
+    }
+}
 
-        ul {
+.navbar {
+    max-width: 1440px;
+    width: 100%;
+    height: 80px;
+    padding: 0px 16px;
+    @include flexCenter-Y();
+    justify-content: space-between;
+    @extend .public-sans;
 
-            li {
-                display: inline;
-                margin-left: 16px;
-                position: relative;
-                transition: 0.3s ease-in-out;
+    ul {
 
-                &:hover {
-                    color: $dark-blue;
-                    cursor: pointer;
-                    
-                    &::after {
-                        opacity: 1;
-                    }
-                }
+        li {
+            display: inline;
+            margin-left: 16px;
+            position: relative;
+            transition: 0.3s ease-in-out;
 
+            &:hover {
+                color: $dark-blue;
+                cursor: pointer;
+                
                 &::after {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: -16px;
-                    height: 4px; 
-                    background: $base-gradient; 
-                    z-index: 1;
-                    opacity: 0;
-                    transition: 0.3s ease-in-out;
+                    opacity: 1;
                 }
             }
+
+            &.active {
+                color: $dark-blue;
+            }
+
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -16px;
+                height: 4px; 
+                background: $base-gradient; 
+                z-index: 1;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+            }
         }
-  
     }
 }

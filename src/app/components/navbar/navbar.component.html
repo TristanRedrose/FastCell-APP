@@ -5,7 +5,7 @@
             <h3>fastcell</h3>
         </div>
         <ul>
-            <li (click)="goToPage('about')">O nama</li>
+            <li (click)="goToPage('about')" [ngClass] = "toggleActiveOnRoute('about')">O nama</li>
             <li>Cjenik</li>
             <li>Usluge</li>
         </ul>

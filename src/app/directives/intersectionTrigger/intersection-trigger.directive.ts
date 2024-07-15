@@ -4,6 +4,7 @@ import { Directive, ElementRef, Renderer2, AfterViewInit, OnDestroy, Input } fro
   selector: '[appIntersectionTrigger]',
   standalone: true,
 })
+
 export class IntersectionTriggerDirective implements AfterViewInit, OnDestroy {
   @Input('appIntersectionTrigger') animationClass : string = '';
   private observer!: IntersectionObserver;
@@ -12,14 +13,19 @@ export class IntersectionTriggerDirective implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     if (typeof window !== 'undefined') {
-      this.observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            this.renderer.addClass(this.el.nativeElement, this.animationClass);
-            this.observer.unobserve(this.el.nativeElement);
-          }
-        });
-      });
+      this.observer = new IntersectionObserver(entries => 
+        {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              this.renderer.addClass(this.el.nativeElement, this.animationClass);
+              this.observer.unobserve(this.el.nativeElement);
+            }
+          });
+        },
+        {
+          threshold: 0.4,
+        }
+      );
   
       this.observer.observe(this.el.nativeElement);
     }

@@ -142,6 +142,18 @@
         .hero-about-bulletin__container {
             grid-template-columns: 1fr;
 
+            & > :nth-child(2) {
+                transition-delay: 0s;
+            }
+    
+            & > :nth-child(3) {
+                transition-delay: 0s;
+            }
+    
+            & > :nth-child(4) {
+                transition-delay: 0s;
+            }
+
             .hero-about-bulletin {
                 width: 250px;
                 height: fit-content;
