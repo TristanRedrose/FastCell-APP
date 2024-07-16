@@ -76,6 +76,10 @@
             color: $lime-green;
             cursor: pointer;
         }
+
+        &.active {
+            color: $lime-green;
+        }
     }
 }
 

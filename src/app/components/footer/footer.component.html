@@ -30,8 +30,8 @@
         </div>
         <div class="nav-container">
             <ul class="nav-links">
-                <li (click)="goToPage('about')"><p>O nama</p></li>
-                <li><p>Kontakt</p></li>
+                <li (click)="goToPage('about')" [ngClass]="toggleActiveOnRoute('about')"><p>O nama</p></li>
+                <li (click)="goToPage('contact')" [ngClass]="toggleActiveOnRoute('contact')"><p>Kontakt</p></li>
                 <li><p>Cijene</p></li>
             </ul>
         </div>

@@ -1,24 +1,27 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationService } from '../../services/navigation/navigation.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
 
-  constructor(private router:Router) {}
+  constructor(private navigationService: NavigationService) {}
 
-  goToPage(page: string) {
-    this.router.navigate([`/${page}`]);
-    window.scroll(
-      { 
-        top: 0, 
-        left: 0,
-      }
-    );
+  goToPage(page: string): void {
+    this.navigationService.goToPage(page);
+  }
+  
+  toggleActiveOnRoute(route: string): string {
+    if (this.navigationService.currentRoute === route) {
+      return "active";
+    }
+
+    return '';
   }
 }
