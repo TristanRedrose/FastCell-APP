@@ -1,18 +1,32 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Renderer2, OnInit } from '@angular/core';
 import { NavigationService } from '../../services/navigation/navigation.service';
+import { NavSidebarComponent } from '../sidebar/nav-sidebar/nav-sidebar.component';
+import { SidebarService } from '../../services/sidebar/sidebar.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavSidebarComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
+
 export class NavbarComponent {
   currentRoute: string = '';
+  menuIsOpen: boolean = false;
+  sidebarKey = "nav-sidebar";
 
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private navigationService: NavigationService, 
+    private sidebarService: SidebarService,
+    private renderer: Renderer2
+  ) {}
+
+  ngOnInit():void {
+    this.renderer.listen('window', 'resize', () => {this.closeSidebarOnWidthTreshold()})
+  }
+
 
   goToPage(page: string): void {
     this.navigationService.goToPage(page);
@@ -26,4 +40,14 @@ export class NavbarComponent {
     return '';
   }
 
+  toggleSidebar() {
+    this.sidebarService.toggleSidebar(this.sidebarKey);
+    this.sidebarService.isVisible(this.sidebarKey).subscribe(isOpen => this.menuIsOpen= isOpen);
+  }
+
+  closeSidebarOnWidthTreshold() {
+    if (window.innerWidth > 600 && this.menuIsOpen) {
+      this.toggleSidebar();
+    }
+  }
 }

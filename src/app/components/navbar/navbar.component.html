@@ -2,12 +2,21 @@
     <nav class="navbar">
         <div class="nav-logo__container" (click)="goToPage('')">
             <img class="logo-image" src="../../../assets/images/CellLogo.png">
-            <h3>fastcell</h3>
+            <h2>fastcell</h2>
         </div>
-        <ul>
-            <li (click)="goToPage('about')" [ngClass]="toggleActiveOnRoute('about')">O nama</li>
-            <li>Cjenik</li>
-            <li>Usluge</li>
+        <ul class="navbar-links">
+            <li (click)="goToPage('about')" [ngClass]="toggleActiveOnRoute('about')"><h4>O nama</h4></li>
+            <li (click)="goToPage('contact')" [ngClass]="toggleActiveOnRoute('contact')"><h4>Kontakt</h4></li>
+            <li><h4>Cjenik</h4></li>
+            <li><h4>Usluge</h4></li>
         </ul>
+        <div (click)="toggleSidebar()" class="hamburger-menu">
+            <div>
+                <span class="line-1" [ngClass]="menuIsOpen ? 'open' : ''"></span>
+                <span class="line-2" [ngClass]="menuIsOpen ? 'open' : ''"></span>
+                <span class="line-3" [ngClass]="menuIsOpen ? 'open' : ''"></span>
+            </div>
+        </div>
     </nav>
+    <app-nav-sidebar></app-nav-sidebar>
 </div>

@@ -1,0 +1,21 @@
+@use "../../../styles/" as *;
+
+.sidebar {
+    width: 150px;
+    height: 100vh;
+    background-color: $dark-blue;
+    @include flexCenter-X();
+    position: fixed;
+    top: 80px;
+    right: -150px;
+    z-index: 100;
+    box-sizing: border-box;
+    border-left: 1px $grayish-blue solid;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+
+    &.open {
+        right: 0;
+        opacity: 1;
+    }
+}

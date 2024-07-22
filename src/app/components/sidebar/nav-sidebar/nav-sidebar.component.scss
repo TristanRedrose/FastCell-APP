@@ -1,0 +1,29 @@
+@use "../../../styles/" as *;
+
+.nav-sidebar-links {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-inline-start: 0px;
+
+    li {
+        display: inline;
+        margin-left: 0px;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $lime-green;
+            cursor: pointer;
+        }
+
+        &.active {
+            color: $lime-green;
+        }
+
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
