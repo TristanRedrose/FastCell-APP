@@ -1,0 +1,25 @@
+<form class="contact-form" id="contact-form">
+    <div class="name-info__container">
+        <div>
+            <label for="fname">Ime *</label>
+            <input type="text" id="fname" name="fname" spellcheck="false">
+        </div>
+        <div>
+            <label for="lname">Prezime *</label>
+            <input type="text" id="lname" name="lname" spellcheck="false">
+        </div>
+    </div>
+    <div class="input-block">
+        <label for="email">Email Adresa *</label>
+        <input type="text" id="email" name="email" spellcheck="false">
+    </div>
+    <div class="input-block">
+        <label for="message">Poruka *</label>
+        <textarea name="message" form="contact-form" id="message" spellcheck="false"> </textarea>
+    </div>
+    <div class="checkbox-block">
+        <input type="checkbox" id="consent" name="consent" value="false">
+        <label for="consent">Pristajem da me kontaktira služba za korisnike *</label>
+    </div>
+    <input type="submit" value="Pošalji" disabled>
+</form>

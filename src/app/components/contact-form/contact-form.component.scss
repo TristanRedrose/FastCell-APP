@@ -1,0 +1,244 @@
+@use "../../styles/" as *;
+
+.contact-form {
+    @include flexCenter-Y();
+    align-items: flex-start;
+    flex-direction: column;
+    width:450px;
+    padding: 25px;
+    background-color: $white;
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    input[type="text"] {
+        border-radius: 4px;
+        border: 1px solid rgba($dark-blue, 0.4);
+        height: 40px;
+        width: 100%;
+        padding: 0px 8px;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:focus {
+            outline: 1px solid rgba($lime-green, 0.4);
+            border: 1px solid rgba($lime-green, 0.4);
+        }
+    }
+    
+    textarea {
+        width: 100%;
+        border: 1px solid rgba($dark-blue, 0.4);
+        padding: 12px 8px;
+        box-sizing: border-box;
+        resize: none;
+        border-radius: 4px;
+        height: 100px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:focus {
+            outline: 1px solid rgba($lime-green, 0.4);
+            border: 1px solid rgba($lime-green, 0.4);
+        }
+    }
+}
+
+.name-info__container {
+    @include flexCenter();
+    width: 100%;
+    column-gap: 16px;
+    margin-bottom: 18px;
+
+
+    div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        width: 50%;
+    }
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.checkbox-block {
+    @include flexCenter();
+    margin-top: 12px;
+    margin-bottom: 20px;
+    user-select: none;
+    position: relative;
+
+    label {
+        font-size: 16px;
+        margin-left: 24px;
+        cursor: pointer;
+    }
+
+    &:hover {
+        #consent::before {
+            outline: 1px solid rgba($lime-green, 0.4);
+            border: 1px solid rgba($lime-green, 0.4);
+        }
+    }
+    
+    #consent {
+        height: 0;
+        width: 0;
+
+        &:checked {
+            &::before {
+                background-color: rgba($lime-green, 0.4);
+                border: 1px solid rgba($lime-green, 0.4);
+            }
+
+            &::after {
+                display: flex;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+            width: 20px;
+            height: 20px;
+            box-sizing: border-box;
+            border: 1px solid rgba($dark-blue, 0.4);
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        &::after {
+            content: '\2713';
+            position: absolute;
+            @include flexCenter();
+            color: white;
+            padding: 4px;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+            width: 20px;
+            height: 20px;
+            box-sizing: border-box;
+            display: none;
+            cursor: pointer;
+        }
+    }
+}
+
+input[type="submit"] {
+    margin-top: 12px;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 100%;
+    padding: 0px 8px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    
+    &:disabled {
+        background-color: rgba($lime-green, 0.2);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .contact-form {
+        width: 375px;
+
+        textarea {
+            height: 150px;
+        }
+    }
+
+    .checkbox-block {
+        label {
+            font-size: 12px;
+            line-height: 1rem;
+        }
+    }
+
+    .checkbox-block {
+
+        #consent {
+    
+            &::before {
+                width: 16px;
+                height: 16px;
+            }
+    
+            &::after {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .contact-form {
+        width: 450px;
+
+        input[type=text], textarea {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-form {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contact-form {
+        width: 325px;
+
+        input[type=text], textarea {
+            font-size: 12px;
+        }
+    }
+
+    .checkbox-block {
+        label {
+            font-size: 10px;
+            margin-left: 16px;
+        }
+    }
+
+    .name-info__container {
+        flex-direction: column;
+        row-gap: 12px;
+        margin-bottom: 12px;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    .checkbox-block {
+        
+        #consent {
+    
+            &::before {
+                width: 14px;
+                height: 14px;
+            }
+    
+            &::after {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}

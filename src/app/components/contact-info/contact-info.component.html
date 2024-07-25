@@ -1,32 +1,37 @@
 <div class="contact-info__container">
     <h2>Kontaktirajte nas</h2>
-    <div class="contact-info">
-        <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
-            <div class="bulletin-logo__container">
-                <img class="bulletin-logo" src="../../../assets/icons/phone.png">
+    <div class="contact-layout__container">
+        <div class="contact-info">
+            <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
+                <div class="bulletin-logo__container">
+                    <img class="bulletin-logo" src="../../../assets/icons/phone.png">
+                </div>
+                <div class="bulletin-text__container">
+                    <h4>Telefon</h4>
+                    <h5>097 7737 7723</h5>
+                </div>
             </div>
-            <div class="bulletin-text__container">
-                <h4>Telefon</h4>
-                <h5>097 7737 7723</h5>
+            <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
+                <div class="bulletin-logo__container">
+                    <img class="bulletin-logo" src="../../../assets/icons/pin.png">
+                </div>
+                <div class="bulletin-text__container">
+                    <h4>Adresa</h4>
+                    <h5>Ulica Mobilnog Popravkića 27, 10360 Sesvete</h5>
+                </div>
+            </div>
+            <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
+                <div class="bulletin-logo__container">
+                    <img class="bulletin-logo" src="../../../assets/icons/mail.png">
+                </div>
+                <div class="bulletin-text__container">
+                    <h4>Mail</h4>
+                    <h5>Fastcell&#64;cellphone-repair.com</h5>
+                </div>
             </div>
         </div>
-        <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
-            <div class="bulletin-logo__container">
-                <img class="bulletin-logo" src="../../../assets/icons/pin.png">
-            </div>
-            <div class="bulletin-text__container">
-                <h4>Adresa</h4>
-                <h5>Ulica Mobilnog Popravkića 27 <br> 10360 Sesvete</h5>
-            </div>
-        </div>
-        <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
-            <div class="bulletin-logo__container">
-                <img class="bulletin-logo" src="../../../assets/icons/mail.png">
-            </div>
-            <div class="bulletin-text__container">
-                <h4>Mail</h4>
-                <h5>Fastcell&#64;cellphone-repair.com</h5>
-            </div>
+        <div class="form__container">
+            <app-contact-form></app-contact-form>
         </div>
     </div>
 </div>

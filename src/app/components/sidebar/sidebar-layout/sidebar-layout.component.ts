@@ -16,7 +16,7 @@ export class SidebarLayoutComponent {
   
   constructor(private sidebarService: SidebarService) { }
 
-  ngOnInit():void {
+  ngOnInit() :void {
     this.sidebarService.isVisible(this.key).subscribe(isOpen => this.isOpen = isOpen);
   }
   

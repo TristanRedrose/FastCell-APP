@@ -32,7 +32,7 @@ h4 {
     font-size :24px;
 }
 
-h5 {
+h5, label {
     font-size: 20px;
 }
 
@@ -48,6 +48,10 @@ p {
 
 li {
     @extend .public-sans-light;
+}
+
+label, textarea, input {
+    @extend .public-sans;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -67,7 +71,7 @@ li {
         font-size :20px;
     }
     
-    h5 {
+    h5, label {
         font-size: 18px;
     }
 
@@ -93,7 +97,7 @@ li {
         font-size :18px;
     }
     
-    h5 {
+    h5, label {
         font-size: 16px;
     }
 }
@@ -115,7 +119,7 @@ li {
         font-size :16px;
     }
     
-    h5 {
+    h5, label {
         font-size: 14px;
     }
     

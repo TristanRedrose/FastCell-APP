@@ -7,33 +7,41 @@
     @include flexCenter();
     flex-direction: column;
     overflow: hidden;
-    padding: 0px 32px;
+    padding: 32px 32px;
     box-sizing: border-box;
 
     h2 {
-        margin-bottom: 100px;
+        margin-top: 0;
+        margin-bottom: 60px;
     }
+}
+
+.contact-layout__container {
+    @include flexCenter-Y();
+    width: 100%;
+    max-width: 1440px;
+    justify-content: space-around;
 }
 
 .contact-info {
     max-width: 1440px;
-    width: 100%;
-    @include flexCenter-Y();
-    flex-direction: row;
+    height: 500px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
 .contact-info-bulletin {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    @include flexCenter();
     width: fit-content;
-    height: 300px;
+    height: fit-content;
     text-align: start;
     opacity: 0;
     transform: translateX(-60%);
     filter: blur(5px);
     transition: 1s all;
+    column-gap: 24px;
 
     &.slide-in {
         opacity: 1;
@@ -48,7 +56,6 @@
     border-radius: 50%;
     background: $base-gradient;
     @include flexCenter();
-    margin-bottom: 48px;
 }
 
 .bulletin-logo {
@@ -65,42 +72,46 @@
 
     h4 {
         margin: 0;
+        line-height: 2rem;
     }
 
     h5 {
         color: $grayish-blue;
         line-height: 2rem;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .bulletin-text__container {
+        max-width: 250px;
     }
 }
 
 @media only screen and (max-width: 760px) {
     .contact-info__container {    
         h2 {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
     }
 
-    .contact-info {
-        flex-direction: column;
+    .contact-layout__container {
+        flex-direction: column-reverse;
     }
-
-    .contact-info-bulletin {
-        width: 250px;
-        height: fit-content;
-        margin-bottom: 24px;
+    .contact-info {
+        margin-top: 40px;
+        height: 300px;
     }
 
     .bulletin-logo__container {
         width: 44px;
         height: 44px;
-        margin-bottom: 24px;
-        align-self: center;
     }
+}
 
+@media only screen and (max-width: 440px) {
     .bulletin-text__container {
-        align-self: center;
-        align-items: center;
-        text-align: center;
+        max-width: 200px;
     }
 }
 
