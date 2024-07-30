@@ -137,7 +137,12 @@
     }
 
     .logo-container {
-        justify-content: center;
+        width: 100%;
+        justify-content: space-around;
+
+        img {
+            margin-right: 0px;
+        }
     }
                 
     .social-links {

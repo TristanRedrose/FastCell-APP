@@ -1,25 +1,40 @@
-<form class="contact-form" id="contact-form">
+<form  [formGroup]="contactForm" class="contact-form" id="contact-form" (ngSubmit)="onSubmit()">
     <div class="name-info__container">
         <div>
             <label for="fname">Ime *</label>
-            <input type="text" id="fname" name="fname" spellcheck="false">
+            <input type="text" id="fname" name="fname" spellcheck="false" formControlName="firstName" [class.error]="firstName.invalid && (firstName.dirty || firstName.touched)">
+            <div class="alert" [class.show]="firstName.invalid && (firstName.dirty || firstName.touched)">
+                <p>Polje mora sadržavati barem 2 znaka!</p>
+            </div>
         </div>
         <div>
             <label for="lname">Prezime *</label>
-            <input type="text" id="lname" name="lname" spellcheck="false">
+            <input type="text" id="lname" name="lname" spellcheck="false" formControlName="lastName" [class.error]="lastName.invalid && (lastName.dirty || lastName.touched)">
+            <div class="alert" [class.show]="lastName.invalid && (lastName.dirty || lastName.touched)">
+                <p>Polje mora sadržavati barem 2 znaka!</p>
+            </div>
         </div>
     </div>
     <div class="input-block">
         <label for="email">Email Adresa *</label>
-        <input type="text" id="email" name="email" spellcheck="false">
+        <input type="text" id="email" name="email" spellcheck="false" formControlName="email" [class.error]="email.invalid && (email.dirty || email.touched)">
+        <div class="alert" [class.show]="email.invalid && (email.dirty || email.touched)">
+            <p>Polje mora sadržavati ispravan email!</p>
+        </div>
     </div>
     <div class="input-block">
         <label for="message">Poruka *</label>
-        <textarea name="message" form="contact-form" id="message" spellcheck="false"> </textarea>
+        <textarea name="message" form="contact-form" id="message" spellcheck="false" formControlName="message" [class.error]="message.invalid && (message.dirty || message.touched)"></textarea>
+        <div class="alert" [class.show]="message.invalid && (message.dirty || message.touched)">
+            <p>Polje mora sadržavati barem 10 znakova!</p>
+        </div>
     </div>
     <div class="checkbox-block">
-        <input type="checkbox" id="consent" name="consent" value="false">
+        <input type="checkbox" id="consent" name="consent" value="true" formControlName="consent">
         <label for="consent">Pristajem da me kontaktira služba za korisnike *</label>
     </div>
-    <input type="submit" value="Pošalji" disabled>
+    <div class="alert" [class.show]="consent.invalid && (consent.dirty || consent.touched)">
+        <p>Molimo pristanite da vas kontaktira služba za korisnike</p>
+    </div>
+    <input type="submit" value="Pošalji" [disabled]="!contactForm.valid">
 </form>
