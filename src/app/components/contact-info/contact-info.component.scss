@@ -25,11 +25,12 @@
 
 .contact-info {
     max-width: 1440px;
-    height: 500px;
+    height: 100%;
     width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    row-gap: 40px;
 }
 
 .contact-info-bulletin {
