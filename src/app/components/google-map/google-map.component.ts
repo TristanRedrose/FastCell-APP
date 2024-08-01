@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-google-map',
@@ -9,10 +11,17 @@ import { GoogleMapsModule } from '@angular/google-maps';
   styleUrl: './google-map.component.scss'
 })
 export class GoogleMapComponent {
-
+  myLocation = {lat: 45.81012, lng: 15.99256}
+  
   options: google.maps.MapOptions = {
-    mapId: "870c049772b23413",
-    center: {lat: 45.81012, lng: 15.99256},
-    zoom: 16
+    mapId: environment.maps_ID,
+    center: this.myLocation,
+    zoom: 16,
   };
+
+  markerOptions: google.maps.marker.AdvancedMarkerElementOptions = {
+    position: this.myLocation,
+    title: "Mobitronic servis d.o.o",
+  }
+  
 }

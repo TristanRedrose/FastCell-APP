@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { noWhitespaceValidator } from '../../validators/noWhitespace.validator';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,10 +15,10 @@ export class ContactFormComponent {
 
 
   contactForm = new FormGroup({
-    firstName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
-    lastName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
+    firstName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50), noWhitespaceValidator(2)]),
+    lastName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50),noWhitespaceValidator(2)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    message: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]),
+    message: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(500), noWhitespaceValidator(10)]),
     consent: new FormControl(false, Validators.requiredTrue),
   })
 
