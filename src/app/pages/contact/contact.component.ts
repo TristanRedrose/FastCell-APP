@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { ContactBannerComponent } from '../../components/contact-banner/contact-banner.component';
-import { ContactInfoComponent } from '../../components/contact-info/contact-info.component';
+import { ContactMapComponent } from '../../components/contact/contact-map/contact-map.component';
 import { SlideInPopupComponent } from '../../components/popup/slide-in-popup/slide-in-popup.component';
 import { MetaService } from '../../services/meta/meta.service';
+import { ContactLayoutComponent } from '../../components/contact/contact-layout/contact-layout.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [
-    ContactBannerComponent,
-    ContactInfoComponent,
-    SlideInPopupComponent
+    ContactMapComponent,
+    SlideInPopupComponent,
+    ContactLayoutComponent
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
@@ -21,7 +21,7 @@ export class ContactComponent {
   
   ngOnInit(): void {
     this.metaService.setMetaTags(
-      'MobiTronic - Contact',
+      'MobiTronic - Kontakt',
       'MobiTronic - Your trusted partner for mobile phone repair services. We offer fast, reliable, and affordable solutions for all your mobile device needs.',
       'MobiTronic, mobile phone repair, fast service, reliable service, affordable repair'
     );

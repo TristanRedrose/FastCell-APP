@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactBannerComponent } from './contact-banner.component';
+import { ContactMapComponent } from './contact-map.component';
 
 describe('ContactBannerComponent', () => {
-  let component: ContactBannerComponent;
-  let fixture: ComponentFixture<ContactBannerComponent>;
+  let component: ContactMapComponent;
+  let fixture: ComponentFixture<ContactMapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactBannerComponent]
+      imports: [ContactMapComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ContactBannerComponent);
+    fixture = TestBed.createComponent(ContactMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

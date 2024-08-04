@@ -1,0 +1,68 @@
+@use '../../styles/' as *;
+
+.home-contact__container {
+    width: 100%;
+    height: fit-content;
+    background-color: $very-light-gray;
+    @include flexCenter();
+    overflow: hidden;
+    padding: 0px 32px;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+}
+
+.home-contact {
+    width: 100%;
+    height: fit-content;
+    max-width: 1440px;
+    @include flexCenter-Y();
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.home-contact-info {
+    margin-top: 60px;
+    width: 100%;
+    @include flexCenter();
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.home-contact-map__container {
+    width: 450px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-map {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .home-contact-map__container {
+        width: 375px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .home-contact-info {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .home-contact-map__container {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .home-contact-map__container {
+        width: 300px;
+        height: 275px;
+    }
+}

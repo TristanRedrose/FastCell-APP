@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { noWhitespaceValidator } from '../../validators/noWhitespace.validator';
-import { PopupService } from '../../services/popup/popup.service';
+import { noWhitespaceValidator } from '../../../validators/noWhitespace.validator';
+import { PopupService } from '../../../services/popup/popup.service';
 
 @Component({
   selector: 'app-contact-form',

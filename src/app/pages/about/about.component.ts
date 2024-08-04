@@ -19,7 +19,7 @@ export class AboutComponent {
 
   ngOnInit(): void {
     this.metaService.setMetaTags(
-      'MobiTronic - About us',
+      'MobiTronic - O nama',
       'MobiTronic - Your trusted partner for mobile phone repair services. We offer fast, reliable, and affordable solutions for all your mobile device needs.',
       'MobiTronic, mobile phone repair, fast service, reliable service, affordable repair'
     );
