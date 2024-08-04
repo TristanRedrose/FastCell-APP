@@ -1,0 +1,43 @@
+@use "../../../styles/" as *;
+
+.popup {
+    position: fixed;
+    top: 10%;
+    right: 0px;
+    transform: translate(50%, 10%);
+    width: fit-content;
+    border-radius: 8px;
+    background-color: $dark-blue;
+    color: $white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    text-align: center;
+}
+
+.close-popup {
+    color: white;
+    font-size: 600;
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    border: none;
+    background-color: $dark-blue;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+        color: red;
+    }
+}
+  
+.popup.show {
+    right: 50%;
+    opacity: 1;
+}
+
+.popup-content {
+    padding: 20px;
+}

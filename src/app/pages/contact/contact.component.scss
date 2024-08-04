@@ -1,0 +1,10 @@
+.popup-text {
+    margin: 0;
+    line-height: 1.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .popup-text {
+        width: 175px;
+    }
+}

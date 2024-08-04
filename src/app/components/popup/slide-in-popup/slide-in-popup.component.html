@@ -1,0 +1,6 @@
+<div #popupElement class="popup" *ngIf="isVisible">
+    <button class="close-popup" (click)="close()">X</button>
+    <div class="popup-content">
+      <ng-content></ng-content>
+    </div>
+</div>

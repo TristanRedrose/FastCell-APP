@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { noWhitespaceValidator } from '../../validators/noWhitespace.validator';
+import { PopupService } from '../../services/popup/popup.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,6 +14,9 @@ import { noWhitespaceValidator } from '../../validators/noWhitespace.validator';
 
 export class ContactFormComponent {
 
+  constructor(private popupService: PopupService) {
+
+  }
 
   contactForm = new FormGroup({
     firstName: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50), noWhitespaceValidator(2)]),
@@ -28,13 +32,15 @@ export class ContactFormComponent {
     }
 
     let contactFormInfo = {
-      firstName: this.firstName.value,
-      lastName: this.lastName.value,
-      email: this.email.value,
-      message: this.message.value,
+      firstName: this.firstName.value!.trim(),
+      lastName: this.lastName.value!.trim(),
+      email: this.email.value!.trim(),
+      message: this.message.value!.trim(),
     }
 
     console.log(contactFormInfo);
+    this.popupService.openPopup();
+    this.contactForm.reset();
   }
 
   get firstName(): FormControl<string | null> {
