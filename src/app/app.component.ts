@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NavigationService } from './services/navigation/navigation.service';
 import { SidebarService } from './services/sidebar/sidebar.service';
 import { PopupService } from './services/popup/popup.service';
+import { MetaService } from './services/meta/meta.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { PopupService } from './services/popup/popup.service';
   providers: [
     NavigationService,
     SidebarService,
-    PopupService
+    PopupService,
+    MetaService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
