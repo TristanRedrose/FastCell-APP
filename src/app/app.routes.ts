@@ -13,18 +13,18 @@ export const routes: Routes = [
         children: [
             {
                 path: '', 
-                component: HomeComponent,
-                title: 'Home page'
+                loadChildren: () => import("./routes/home.routes")
+                .then(r => r.homeRoute)
             },
             {
                 path: 'about', 
-                component: AboutComponent,
-                title: 'Home page'
+                loadChildren: () => import("./routes/about.routes")
+                .then(r => r.aboutRoute)
             },
             {
                 path: 'contact', 
-                component: ContactComponent,
-                title: 'Contact page'
+                loadChildren: () => import("./routes/contact.routes")
+                .then(r => r.contactRoute)
             }
         ]
     }
