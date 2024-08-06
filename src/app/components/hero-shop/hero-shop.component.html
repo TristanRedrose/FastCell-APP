@@ -1,46 +1,51 @@
 <div class="hero-shop__container">
     <div class="hero-shop">
         <h2>Prodaja i otkup uređaja</h2>
-        <div class="shop-info__container">
-            <div class="shop-image__container">
-                <img class="shop-image" ngSrc="/assets/images/cellphones1.png" alt="cellphones-shop" fill>
+        @defer(on viewport) {
+            <div class="shop-info__container">
+                <div class="shop-image__container">
+                    <img class="shop-image" ngSrc="/assets/images/cellphones1.png" alt="cellphones-shop" fill>
+                </div>
+                <div class="hero-shop-text__container">
+                    <h4>Zašto kupiti rabljeni uređaj kod nas</h4>
+                    <ul class="translate-right" [appIntersectionTrigger] = "'slide-in'">
+                        <li><h4>Kvaliteta i pouzdanost</h4></li>
+                        <li><h5>Svi uređaji su testirani i certificirani od strane naših stručnih tehničara.</h5></li>
+                        <li><h4>Jamstvo</h4></li>
+                        <li><h5>Na sve rabljene uređaje dajemo jamstvo kako biste imali dodatnu sigurnost.</h5></li>
+                        <li><h4>Povoljna cijena</h4></li>
+                        <li><h5>Uštedite novac kupnjom rabljenog uređaja bez kompromisa na kvaliteti.</h5></li>
+                        <li><h4>Širok izbor</h4></li>
+                        <li><h5>Nudimo razne modele različitih brendova kako bismo zadovoljili sve vaše potrebe.</h5></li>
+                    </ul>
+                </div>
             </div>
-            <div class="hero-shop-text__container">
-                <h4>Zašto kupiti rabljeni uređaj kod nas</h4>
-                <ul class="translate-right" [appIntersectionTrigger] = "'slide-in'">
-                    <li><h4>Kvaliteta i pouzdanost</h4></li>
-                    <li><h5>Svi uređaji su testirani i certificirani od strane naših stručnih tehničara.</h5></li>
-                    <li><h4>Jamstvo</h4></li>
-                    <li><h5>Na sve rabljene uređaje dajemo jamstvo kako biste imali dodatnu sigurnost.</h5></li>
-                    <li><h4>Povoljna cijena</h4></li>
-                    <li><h5>Uštedite novac kupnjom rabljenog uređaja bez kompromisa na kvaliteti.</h5></li>
-                    <li><h4>Širok izbor</h4></li>
-                    <li><h5>Nudimo razne modele različitih brendova kako bismo zadovoljili sve vaše potrebe.</h5></li>
-                </ul>
+            <div class="shop-info__container">
+                <div class="shop-image__container">
+                    <img class="shop-image" ngSrc="/assets/images/phones3.png" alt="cellphones-shop" fill>
+                </div>
+                <div class="hero-shop-text__container">
+                    <h4>Zašto prodati uređaj kod nas</h4>
+                    <ul class="translate-left" [appIntersectionTrigger] = "'slide-in'">
+                        <li><h4>Brza procjena</h4></li>
+                        <li><h5>Dobijte brzu i točnu procjenu vrijednosti vašeg uređaja.</h5></li>
+                        <li><h4>Isplata odmah</h4></li>
+                        <li><h5>Nakon procjene i prihvaćanja ponude, isplatu vršimo odmah.</h5></li>
+                        <li><h4>Ekološki prihvatljivo</h4></li>
+                        <li><h5>Pomozite smanjiti elektronički otpad recikliranjem vašeg starog uređaja.</h5></li>
+                        <li><h4>Jednostavan proces</h4></li>
+                        <li><h5>Naša procedura je brza i bez komplikacija, tako da možete prodati svoj uređaj s lakoćom.</h5></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="shop-info__container">
-            <div class="shop-image__container">
-                <img class="shop-image" ngSrc="/assets/images/phones3.png" alt="cellphones-shop" fill>
+            <div class="hero-shop-button__container">
+                <div class="hero-shop-button">
+                    <h4>Vidi ponudu</h4>
+                </div>
             </div>
-            <div class="hero-shop-text__container">
-                <h4>Zašto prodati uređaj kod nas</h4>
-                <ul class="translate-left" [appIntersectionTrigger] = "'slide-in'">
-                    <li><h4>Brza procjena</h4></li>
-                    <li><h5>Dobijte brzu i točnu procjenu vrijednosti vašeg uređaja.</h5></li>
-                    <li><h4>Isplata odmah</h4></li>
-                    <li><h5>Nakon procjene i prihvaćanja ponude, isplatu vršimo odmah.</h5></li>
-                    <li><h4>Ekološki prihvatljivo</h4></li>
-                    <li><h5>Pomozite smanjiti elektronički otpad recikliranjem vašeg starog uređaja.</h5></li>
-                    <li><h4>Jednostavan proces</h4></li>
-                    <li><h5>Naša procedura je brza i bez komplikacija, tako da možete prodati svoj uređaj s lakoćom.</h5></li>
-                </ul>
-            </div>
-        </div>
-        <div class="hero-shop-button__container">
-            <div class="hero-shop-button">
-                <h4>Vidi ponudu</h4>
-            </div>
-        </div>
+        } @placeholder(minimum 500ms) {
+            <app-home-shop-skeleton></app-home-shop-skeleton>
+        }
+        
     </div>
 </div>

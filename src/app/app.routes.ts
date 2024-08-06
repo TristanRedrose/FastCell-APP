@@ -27,5 +27,10 @@ export const routes: Routes = [
                 .then(r => r.contactRoute)
             }
         ]
+    },
+    {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full',
     }
 ];
