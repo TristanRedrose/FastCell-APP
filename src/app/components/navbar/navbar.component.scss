@@ -20,6 +20,12 @@
     }
 }
 
+.logo-image {
+    width: 32px;
+    height: 48px;
+    margin-right: 12px;
+}
+
 .navbar {
     max-width: 1440px;
     width: 100%;
@@ -128,13 +134,14 @@
     }
 }
 
-
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 760px) {
     .logo-image {
         width: 28px;
         height: 44px;
     }
+}
+
+@media only screen and (max-width: 600px) {
 
     .navbar-links {
         display: none;

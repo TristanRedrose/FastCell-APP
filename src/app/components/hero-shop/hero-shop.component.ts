@@ -13,6 +13,7 @@ import { HomeShopSkeletonComponent } from '../skeleton/home-shop/home-shop-skele
   templateUrl: './hero-shop.component.html',
   styleUrl: './hero-shop.component.scss'
 })
+
 export class HeroShopComponent {
 
 }

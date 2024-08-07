@@ -1,13 +1,17 @@
 <div class="home-contact__container">
     <div class="home-contact">
         <h2>Kako do nas</h2>
-        <div class="home-contact-info">
-            <app-contact-info></app-contact-info>
-            <div class="home-contact-map__container">
-                <div class="home-map">
-                    <app-google-map></app-google-map>
+        @defer(on viewport) {
+            <div class="home-contact-info">
+                <app-contact-info></app-contact-info>
+                <div class="home-contact-map__container">
+                    <div class="home-map">
+                        <app-google-map></app-google-map>
+                    </div>
                 </div>
             </div>
-        </div>
+        } @placeholder(minimum 500ms) {
+            <app-contact-info-skeleton></app-contact-info-skeleton>
+        }
     </div>
 </div>
