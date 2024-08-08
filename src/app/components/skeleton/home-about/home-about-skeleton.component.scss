@@ -1,0 +1,81 @@
+@use '../../../styles/' as *;
+
+:host {
+    width: 100%;
+    @include flexCenter-Y();
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-about-bulletin-skeleton {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 20%;
+    height: 400px;
+    
+}
+
+.bulletin-logo-skeleton {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $white;
+    margin-bottom: 48px;
+}
+        
+.bulletin-text-skeleton {
+    width: 100%;
+    background: $white;
+    height: 250px;
+}
+
+
+
+@media only screen and (max-width: 940px) {
+    :host {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .home-about-bulletin-skeleton {
+        width: 250px;
+        height: 325px;
+        align-items: center;
+    }
+
+    .bulletin-logo-skeleton {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 40px;
+    }
+
+    .bulletin-text-skeleton {
+        height: 175px;
+    }
+}
+
+
+@media only screen and (max-width: 760px) {
+    :host{
+        grid-template-columns: 1fr;
+    }
+
+    .home-about-bulletin-skeleton {
+        width: 250px;
+        height: fit-content;
+        margin-bottom: 24px;
+    }
+
+    .bulletin-logo-skeleton {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 24px;
+    }
+
+    .bulletin-text-skeleton {
+        height: 143px;
+    }
+}

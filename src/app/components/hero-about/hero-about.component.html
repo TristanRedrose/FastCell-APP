@@ -1,43 +1,47 @@
 <div class="hero-about__container">
     <div class="hero-about">
         <h2>Zašto odabrati nas?</h2>
-        <div class="hero-about-bulletin__container">
-            <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
-                <div class="bulletin-logo__container">
-                    <img class="bulletin-logo" src="/assets/icons/users-cog-svgrepo-com.svg" alt="experienced">
+        @defer(on viewport) {
+            <div class="hero-about-bulletin__container">
+                <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
+                    <div class="bulletin-logo__container">
+                        <img class="bulletin-logo" src="/assets/icons/users-cog-svgrepo-com.svg" alt="experienced">
+                    </div>
+                    <div class="bulletin-text__container">
+                        <h4>Iskusni tehničari</h4>
+                        <h5>Naš tim sastoji se od visoko kvalificiranih tehničara s dugogodišnjim iskustvom u popravku svih vrsta mobilnih uređaja.</h5>
+                    </div>
                 </div>
-                <div class="bulletin-text__container">
-                    <h4>Iskusni tehničari</h4>
-                    <h5>Naš tim sastoji se od visoko kvalificiranih tehničara s dugogodišnjim iskustvom u popravku svih vrsta mobilnih uređaja.</h5>
+                <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
+                    <div class="bulletin-logo__container">
+                        <img class="bulletin-logo" src="/assets/icons/quality-svgrepo-com.svg" alt="quality">
+                    </div>
+                    <div class="bulletin-text__container">
+                        <h4>Visokokvalitetni dijelovi</h4>
+                        <h5>Koristimo samo originalne ili najkvalitetnije zamjenske dijelove kako bi vaš uređaj bio kao nov.</h5>
+                    </div>
+                </div>
+                <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
+                    <div class="bulletin-logo__container">
+                        <img class="bulletin-logo" src="/assets/icons/discount-badge-svgrepo-com.svg" alt="affordable">
+                    </div>
+                    <div class="bulletin-text__container">
+                        <h4>Povoljni troškovi</h4>
+                        <h5>Nudimo konkurentne cijene bez skrivenih troškova.</h5>
+                    </div>
+                </div>
+                <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
+                    <div class="bulletin-logo__container">
+                        <img class="bulletin-logo" src="/assets/icons/guarantee-svgrepo-com.svg" alt="guarantee">
+                    </div>
+                    <div class="bulletin-text__container">
+                        <h4>Garancija na sve popravke</h4>
+                        <h5>Sve naše usluge dolaze s garancijom, tako da možete biti sigurni u kvalitetu popravka.</h5>
+                    </div>
                 </div>
             </div>
-            <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
-                <div class="bulletin-logo__container">
-                    <img class="bulletin-logo" src="/assets/icons/quality-svgrepo-com.svg" alt="quality">
-                </div>
-                <div class="bulletin-text__container">
-                    <h4>Visokokvalitetni dijelovi</h4>
-                    <h5>Koristimo samo originalne ili najkvalitetnije zamjenske dijelove kako bi vaš uređaj bio kao nov.</h5>
-                </div>
-            </div>
-            <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
-                <div class="bulletin-logo__container">
-                    <img class="bulletin-logo" src="/assets/icons/discount-badge-svgrepo-com.svg" alt="affordable">
-                </div>
-                <div class="bulletin-text__container">
-                    <h4>Povoljni troškovi</h4>
-                    <h5>Nudimo konkurentne cijene bez skrivenih troškova.</h5>
-                </div>
-            </div>
-            <div class="hero-about-bulletin" [appIntersectionTrigger]="'slide-in'">
-                <div class="bulletin-logo__container">
-                    <img class="bulletin-logo" src="/assets/icons/guarantee-svgrepo-com.svg" alt="guarantee">
-                </div>
-                <div class="bulletin-text__container">
-                    <h4>Garancija na sve popravke</h4>
-                    <h5>Sve naše usluge dolaze s garancijom, tako da možete biti sigurni u kvalitetu popravka.</h5>
-                </div>
-            </div>
-        </div>
+        } @placeholder {
+            <app-home-about-skeleton></app-home-about-skeleton>
+        }
     </div>
 </div>
