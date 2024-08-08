@@ -39,6 +39,7 @@
     border-radius: 8px;
     background-color: $white;
     overflow: hidden;
+    max-height: 550px;
 }
 
 .service-image__container {
@@ -75,14 +76,16 @@
 
     .services__container, .services__container--bottom {
         margin-bottom: 40px;
+        
     }
 
     .service__container {
         width: 30%;
+        height: 425px;
     }
 
     .service-image__container {
-        height: 250px;
+        height: 225px;
     }
 }
             
@@ -100,6 +103,7 @@
 
         .service__container {
             width: 275px;
+            height: 325px;
         }
 
         .service-image__container {

@@ -1,0 +1,58 @@
+@use '../../../styles/' as *;
+
+:host {
+    width: 100%;
+}
+
+.services__container-skeleton {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    &.bottom {
+        justify-content: space-around;
+    }
+}
+
+.service__container-skeleton {
+    width: 25%;
+    border-radius: 8px;
+    background-color: $light-grayish-blue;
+    height: 550px;
+}
+
+@media only screen and (max-width: 1040px) {
+
+    .services__container-skeleton {
+        margin-bottom: 40px;
+    }
+
+    .service__container-skeleton {
+        width: 30%;
+        height: 425px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .host {
+        align-items: center;
+    }
+
+    .services__container-skeleton {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+        
+    }
+
+    .service__container-skeleton {
+        width: 275px;
+        height: 325px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .service__container-skeleton {
+        width: 250px;
+    }
+}
