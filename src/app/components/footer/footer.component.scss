@@ -101,9 +101,15 @@
     font-size: 14px;
     color: $grayish-blue;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     width: 50%;
+}
+
+.grb-image {
+    height: 60px;
+    width: 60px;
 }
 
 @media only screen and (max-width: 940px) {
@@ -186,6 +192,11 @@
         width: 28px;
         height: 44px;
         margin-right: 0;
+    }
+
+    .grb-image {
+        height: 48px;
+        width: 48px;
     }
 }
 
