@@ -87,9 +87,9 @@
         margin: 0;
     }
 
-    h5 {
+    p {
         color: $grayish-blue;
-        line-height: 1.6rem;
+        line-height: 1.5;
     }
 }
 
@@ -128,7 +128,7 @@
 
     .bulletin-text__container {
         align-items: center;
-        text-align: center;
+        text-align: start;
     }
 }
 

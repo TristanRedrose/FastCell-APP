@@ -9,6 +9,21 @@
     position: sticky;
     z-index: 100;
     top: 0;
+
+    a {
+        text-decoration: none;
+        color: $grayish-blue;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $dark-blue;
+            cursor: pointer;
+        }
+
+        &.active {
+            color: $dark-blue;
+        }
+    }
 }
 
 .nav-logo__container {
@@ -17,6 +32,10 @@
 
     &:hover {
         cursor: pointer;
+    }
+
+    h2 {
+        margin: 0;
     }
 }
 
@@ -47,16 +66,10 @@
         transition: 0.3s ease-in-out;
 
         &:hover {
-            color: $dark-blue;
-            cursor: pointer;
             
             &::after {
                 opacity: 1;
             }
-        }
-
-        &.active {
-            color: $dark-blue;
         }
 
 

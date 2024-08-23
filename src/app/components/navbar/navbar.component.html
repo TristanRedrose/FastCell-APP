@@ -1,16 +1,18 @@
 <div class="navbar-container">
-    <nav class="navbar">
-        <div class="nav-logo__container" (click)="goToPage('')">
-            <img class="logo-image" src="/assets/images/CellLogo.webp" alt="mobitronic-logo">
-            <h2>Mobitronic</h2>
+    <nav class="navbar" aria-label="Main Navigation">
+        <div class="nav-logo__container" (click)="goToPage('')" role="button" aria-label="Go to home page">
+            <img class="logo-image" src="/assets/images/CellLogo.webp" alt="Mobitronic Service Logo">
+            <h2>Mobitronic service</h2>
         </div>
-        <ul class="navbar-links">
-            <li (click)="goToPage('about')" [ngClass]="toggleActiveOnRoute('about')"><h4>O nama</h4></li>
-            <li (click)="goToPage('contact')" [ngClass]="toggleActiveOnRoute('contact')"><h4>Kontakt</h4></li>
-            <li><h4>Cjenik</h4></li>
-            <li><h4>Usluge</h4></li>
+        <ul class="navbar-links" role="menu">
+            <li role="menuitem">
+                <a [routerLink]="['/about']" aria-label="About Us" [ngClass]="toggleActiveOnRoute('about')"><h4>O nama</h4></a>
+            </li>
+            <li role="menuitem">
+                <a [routerLink]="['/contact']" aria-label="Contact" [ngClass]="toggleActiveOnRoute('contact')"><h4>Kontakt</h4></a>
+            </li>
         </ul>
-        <div (click)="toggleSidebar()" class="hamburger-menu">
+        <div (click)="toggleSidebar()" class="hamburger-menu" [attr.aria-expanded]=menuIsOpen aria-label="Toggle menu">
             <div>
                 <span class="line-1" [ngClass]="menuIsOpen ? 'open' : ''"></span>
                 <span class="line-2" [ngClass]="menuIsOpen ? 'open' : ''"></span>

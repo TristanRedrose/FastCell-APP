@@ -1,58 +1,58 @@
 <div class="hero-services__container">
-    <div class="hero-services">
-        <h2>Usluge</h2>
+    <section class="hero-services" aria-labelledby="hero-services-heading">
+        <h2 id="hero-services-heading">Naše Usluge</h2>
         @defer(on viewport) {
             <div class="services__container">
-                <div class="service__container">
+                <article class="service__container">
                     <div class="service-image__container">
-                        <img class="service-image" ngSrc="/assets/images/istockphoto-glass repair.jpg" alt="glass-repair" fill>
+                        <img class="service-image" ngSrc="/assets/images/istockphoto-glass repair.jpg" alt="Screen repair service" fill>
                     </div>
                     <div class="service-text__container">
                         <h4>Zamjena stakla i ekrana</h4>
-                        <h5>Zamjena napuknutog stakla i novog original ili zamjenskog ekrana.</h5>
+                        <p>Zamjena napuknutog stakla i novog original ili zamjenskog ekrana.</p>
                     </div>
-                </div>
-                <div class="service__container">
+                </article>
+                <article class="service__container">
                     <div class="service-image__container">
-                        <img class="service-image" ngSrc="/assets/images/damaged-cell-phone-data-recovery-768x511.jpg" alt="data-recovery" fill>
+                        <img class="service-image" ngSrc="/assets/images/damaged-cell-phone-data-recovery-768x511.jpg" alt="Data recovery service" fill>
                     </div>
                     <div class="service-text__container">
                         <h4>Spašavanje i kopiranje podataka na novi uređaj</h4>
-                        <h5>Spašavamo podatke sa neispravnih uređaja i kopiramo na novi uređaj ili USB stick.</h5>
+                        <p>Spašavamo podatke sa neispravnih uređaja i kopiramo na novi uređaj ili USB stick.</p>
                     </div>
-                </div>
-                <div class="service__container">
+                </article>
+                <article class="service__container">
                     <div class="service-image__container">
-                        <img class="service-image" ngSrc="/assets/images/gettyimages-camera-replacement.jpg" alt="camera-replacement" fill>
+                        <img class="service-image" ngSrc="/assets/images/designer.jpeg" alt="Laptop repair service" fill>
                     </div>
                     <div class="service-text__container">
                         <h4>Popravak laptopa</h4>
-                        <h5>Zamjena ekrana, utora za punjenje, ugradnja diskova i instalacija windowsa.</h5>
+                        <p>Zamjena ekrana, utora za punjenje, ugradnja diskova i instalacija windowsa.</p>
                     </div>
-                </div>
+                </article>
             </div>
             <div class="services__container--bottom">
-                <div class="service__container">
+                <article class="service__container">
                     <div class="service-image__container">
-                        <img class="service-image" ngSrc="/assets/images/speaker-repair-BG.jpg" alt="speaker-replacement" fill>
+                        <img class="service-image" ngSrc="/assets/images/speaker-repair-BG.jpg" alt="Speaker replacement service" fill>
                     </div>
                     <div class="service-text__container">
                         <h4>Zamjena mikrofona i zvučnika</h4>
-                        <h5>Zamjene i popravci neispravnih mikrofona i slušalica.</h5>
+                        <p>Profesionalna zamjena mikrofona i zvučnika za čist zvuk vaših uređaja.</p>
                     </div>
-                </div>
-                <div class="service__container">
+                </article>
+                <article class="service__container">
                     <div class="service-image__container">
-                        <img class="service-image" ngSrc="/assets/images/battery-replacement.jpg" alt="battery-replacement" fill>
+                        <img class="service-image" ngSrc="/assets/images/battery-replacement.jpg" alt="Battery replacement service" fill>
                     </div>
                     <div class="service-text__container">
                         <h4>Zamjena baterije</h4>
-                        <h5>Koristimo originalne ili visokokvalitetne zamjenske baterije koje osiguravaju dugotrajan rad vašeg uređaja.</h5>
+                        <p>Koristimo originalne ili visokokvalitetne zamjenske baterije koje osiguravaju dugotrajan rad vašeg uređaja.</p>
                     </div>
-                </div>
+                </article>
             </div>
         } @placeholder(minimum 500ms) {
             <app-home-services-skeleton></app-home-services-skeleton>
         }
-    </div>
+    </section>
 </div>

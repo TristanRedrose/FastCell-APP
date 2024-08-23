@@ -3,11 +3,12 @@ import { Component, Renderer2, OnInit } from '@angular/core';
 import { NavigationService } from '../../services/navigation/navigation.service';
 import { NavSidebarComponent } from '../sidebar/nav-sidebar/nav-sidebar.component';
 import { SidebarService } from '../../services/sidebar/sidebar.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, NavSidebarComponent],
+  imports: [CommonModule, NavSidebarComponent, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

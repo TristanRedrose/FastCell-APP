@@ -12,15 +12,17 @@ export class NavigationService {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         this._currentRoute = e.url.substring(1);
-      }
-    })
+        if (typeof window !== 'undefined') {
+          window.scroll(
+            {top: 0,left:0}
+          );
+        };
+      };
+    });
   }
 
   goToPage(page: string): void {
     this.router.navigate([`/${page}`]);
-    window.scroll(
-      {top: 0,left:0}
-    )
   }
 
   set currentRoute(newRoute: string) {

@@ -17,6 +17,5 @@ export class PopupService {
 
   closePopup():void {
     this._isOpen.next(false);
-    
   }
 }

@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { NavigationService } from '../../services/navigation/navigation.service';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { SidebarService } from '../../services/sidebar/sidebar.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [CommonModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    RouterModule
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
