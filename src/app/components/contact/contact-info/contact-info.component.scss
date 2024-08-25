@@ -53,10 +53,19 @@
         line-height: 2rem;
     }
 
-    h5 {
+    a {
+        text-decoration: none;
+    }
+
+    p {
         color: $grayish-blue;
         line-height: 2rem;
         margin: 0;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $lime-green;
+        }
     }
 }
 

@@ -20,20 +20,6 @@
         div {
             height: 100%;
         }
-
-        a {
-            text-decoration: none;
-            color: $very-light-gray;
-            transition: 0.3s ease-in-out;
-
-            &:hover {
-                color: $lime-green;
-            }
-
-            &.active {
-                color: $lime-green;
-            }
-        }
     }
 }
 
@@ -51,18 +37,22 @@
 } 
 
 .logo-container {
-    @include flexCenter-Y();
-    color: $very-light-gray;
-    @extend .public-sans-heavy;
-    width: fit-content;
+    a {
+        text-decoration: none;
+        @include flexCenter-Y();
+        color: $very-light-gray;
+        @extend .public-sans-heavy;
+        width: fit-content;
 
-    &:hover {
-        cursor: pointer;
-    }
+        &:hover {
+            cursor: pointer;
+        }
 
-    h3 {
-        margin: 0;
+        h3 {
+            margin: 0;
+        }
     }
+    
 }
 
 .info-div {
@@ -77,33 +67,21 @@
         }
     }
 }
-
-.social-links {
-    padding : 0;
-    width: fit-content;
-
-    li {
-        display: inline;
-        margin-right: 8px;
-
-        &:hover {
-            cursor: pointer;
-            .social-link-image {
-                display: none;
-            }
-
-            .social-link-image__active {
-                display: inline;
-            }
-        }
-    }
-}
-
-.social-link-image__active {
-    display: none;
-}
     
 .nav-container {
+    a {
+        text-decoration: none;
+        color: $very-light-gray;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $lime-green;
+        }
+
+        &.active {
+            color: $lime-green;
+        }
+    }
 
     li {
         display: flex;
@@ -171,21 +149,14 @@
     }
 
     .logo-container {
-        flex-direction: column;
-        row-gap: 12px;
-    }
-                
-    .social-links {
-        display: flex;
-        column-gap: 12px;
-
-        li {
-            margin: 0;
+        a {
+            column-gap: 8px;
+            
         }
     }
             
     .nav-container {
-        width: fit-content;
+        width: 235px;
         margin-bottom: 0px;
 
         li {
@@ -196,8 +167,9 @@
     }
 
     .nav-links {
-        display: flex;
+        display: none;
         margin: 0;
+        margin-top: 20px;
         column-gap: 24px;
     }
 

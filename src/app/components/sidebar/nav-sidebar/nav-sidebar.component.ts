@@ -3,11 +3,12 @@ import { SidebarLayoutComponent } from '../sidebar-layout/sidebar-layout.compone
 import { NavigationService } from '../../../services/navigation/navigation.service';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from '../../../services/sidebar/sidebar.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-sidebar',
   standalone: true,
-  imports: [SidebarLayoutComponent, CommonModule],
+  imports: [SidebarLayoutComponent, CommonModule, RouterModule],
   templateUrl: './nav-sidebar.component.html',
   styleUrl: './nav-sidebar.component.scss'
 })
@@ -27,8 +28,7 @@ export class NavSidebarComponent {
     return '';
   }
 
-  goToPage(page: string) {
-    this.navigationService.goToPage(page);
-    this.sidebarService.toggleSidebar('nav-sidebar');
+  closeNavSidebar() {
+    this.sidebarService.closeSidebar('nav-sidebar');
   }
 }

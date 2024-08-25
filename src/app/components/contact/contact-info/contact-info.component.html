@@ -1,31 +1,40 @@
-<div class="contact-info">  
-    <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
+<section class="contact-info">  
+    <article class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
         <div class="bulletin-logo__container">
-            <img class="bulletin-logo" src="../../../assets/icons/phone.webp" alt="phone">
-        </div>
-        <div class="bulletin-text__container">
-            <h4>Telefon</h4>
-            <h5>098 733 721</h5>
-        </div>
-    </div>
-    <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
-        <div class="bulletin-logo__container">
-            <img class="bulletin-logo" src="../../../assets/icons/pin.webp" alt="adress">
+            <img class="bulletin-logo" src="../../../assets/icons/pin.webp" alt="Adress Icon">
         </div>
         <div class="bulletin-text__container">
             <h4>Adresa</h4>
-            <h5>Ul. kralja Zvonimira 24, 10000 Zagreb</h5>
+            <a href="https://www.google.com/maps/place/Servis+mobitela+Mobitronic+service+d.o.o./@45.8101216,15.9925604,17z/data=!4m14!1m7!3m6!1s0x4765d7083b0f3561:0x280a59daed90d7c8!2sServis+mobitela+Mobitronic+service+d.o.o.!8m2!3d45.8101216!4d15.9925604!16s%2Fg%2F11y5ghm_gf!3m5!1s0x4765d7083b0f3561:0x280a59daed90d7c8!8m2!3d45.8101216!4d15.9925604!16s%2Fg%2F11y5ghm_gf?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                itemprop="adress"
+                aria-label="View our location on Google Maps">
+                <p>Ul. kralja Zvonimira 24, 10000 Zagreb</p>
+            </a>
         </div>
-    </div>
-    <div class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
+    </article>
+    <article class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
         <div class="bulletin-logo__container">
-            <img class="bulletin-logo" src="../../../assets/icons/mail.webp" alt="mail">
+            <img class="bulletin-logo" src="../../../assets/icons/phone.webp" alt="Phone Icon">
+        </div>
+        <div class="bulletin-text__container">
+            <h4>Telefon</h4>
+            <a href="tel:38598733721" itemprop="telephone" aria-label="Call us at 098 733 721">
+                <p>098 733 721</p>
+            </a>
+        </div>
+    </article>
+    <article class="contact-info-bulletin" [appIntersectionTrigger]="'slide-in'">
+        <div class="bulletin-logo__container">
+            <img class="bulletin-logo" src="../../../assets/icons/mail.webp" alt="Mail Icon">
         </div>
         <div class="bulletin-text__container">
             <h4>Mail</h4>
-            <h5>mobitronic.service&#64;gmail.com</h5>
+            <a href="mailto:mobitronic.service@gmail.com" itemprop="email" aria-label="Email us at mobitronic.service@gmail.com">
+                <p>mobitronic.service&#64;gmail.com</p>
+            </a>
         </div>
-    </div>
-</div>  
+    </article>
+</section>  
        
   

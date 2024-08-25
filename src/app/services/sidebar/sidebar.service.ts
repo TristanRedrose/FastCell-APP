@@ -31,4 +31,8 @@ export class SidebarService {
       }
     })
   }
+
+  closeSidebar(key:string) {
+    this.sidebars[key].isOpen.next(false);
+  }
 }

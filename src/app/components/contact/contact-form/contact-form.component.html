@@ -17,7 +17,7 @@
     </div>
     <div class="input-block">
         <label for="email">Email Adresa *</label>
-        <input type="text" id="email" name="email" spellcheck="false" formControlName="email" [class.error]="email.invalid && (email.dirty || email.touched)">
+        <input type="email" id="email" name="email" spellcheck="false" formControlName="email" [class.error]="email.invalid && (email.dirty || email.touched)">
         <div class="alert" [class.show]="email.invalid && (email.dirty || email.touched)">
             <p>Polje mora sadržavati ispravan email!</p>
         </div>

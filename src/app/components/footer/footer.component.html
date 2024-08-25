@@ -1,41 +1,52 @@
 <div class="footer-container">
     <footer>
         <div itemscope itemtype="http://schema.org/LocalBusiness" class="social-container">
-            <div class="logo-container" (click)="goToPage('')">
-                <img class="logo-image" src="/assets/images/CellLogoBlue.webp" alt="Mobitronic Service Company Logo">
-                <h3 itemprop="name">Mobitronic service d.o.o.</h3>
+            <div class="logo-container">
+                <a [routerLink]="['']" aria-label="Početna - Home" title="Go to Home page" (click)="closeNavSidebar()">
+                    <img class="logo-image" src="/assets/images/CellLogoBlue.webp" alt="Mobitronic Service Company Logo" itemprop="logo">
+                    <h3 itemprop="name">Mobitronic service d.o.o.</h3>
+                </a>
             </div>
-            <div class="info-div">
+            <div class="info-div" itemprop="openingHours" datetime="Mo-Fr 08:00-18:00, Sa 09:00-14:00">
                 <p><span>Radno vrijeme:</span> Pon - Pet: 08:00 - 18:00</p>
                 <p>Sub: 09:00 - 14:00</p>
             </div>
         </div>
         <div class="nav-container">
             <ul class="info-list">
-                <li itemprop="telephone">
-                    <img class="info-image" src="/assets/icons/telephone-blue.png" alt="Phone icon">
-                    <p>098 733 721</p>
-                </li>
-                <li itemprop="adress">
+                <li>
                     <img class="info-image" src="/assets/icons/home-blue.png" alt="Location icon">
-                    <p>Ul. kralja Zvonimira 24, 10000 Zagreb</p>
+                    <a href="https://www.google.com/maps/place/Servis+mobitela+Mobitronic+service+d.o.o./@45.8101216,15.9925604,17z/data=!4m14!1m7!3m6!1s0x4765d7083b0f3561:0x280a59daed90d7c8!2sServis+mobitela+Mobitronic+service+d.o.o.!8m2!3d45.8101216!4d15.9925604!16s%2Fg%2F11y5ghm_gf!3m5!1s0x4765d7083b0f3561:0x280a59daed90d7c8!8m2!3d45.8101216!4d15.9925604!16s%2Fg%2F11y5ghm_gf?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        itemprop="adress"
+                        aria-label="View our location on Google Maps">
+                        <p>Ul. kralja Zvonimira 24, 10000 Zagreb</p>
+                    </a>
                 </li>
-                <li itemprop="email">
+                <li >
+                    <img class="info-image" src="/assets/icons/telephone-blue.png" alt="Phone icon">
+                    <a href="tel:38598733721" itemprop="telephone" aria-label="Call us at 098 733 721">
+                        <p>098 733 721</p>
+                    </a>
+                </li>
+                <li>
                     <img class="info-image" src="/assets/icons/mail-blue.png" alt="Email icon">
-                    <a href="mailto:mobitronic.service@gmail.com"><p>mobitronic.service&#64;gmail.com</p></a>
+                    <a href="mailto:mobitronic.service@gmail.com" itemprop="email" aria-label="Email us at mobitronic.service@gmail.com">
+                        <p>mobitronic.service&#64;gmail.com</p>
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="nav-container">
             <ul class="nav-links">
                 <li>
-                    <a [routerLink]="['']" aria-label="Početna - Home" [ngClass]="toggleActiveOnRoute('')"><p>Početna</p></a>
+                    <a [routerLink]="['']" aria-label="Početna - Home" [ngClass]="toggleActiveOnRoute('')" title="Go to Home page" (click)="closeNavSidebar()"><p>Početna</p></a>
                 </li>
                 <li>
-                    <a [routerLink]="['/about']" aria-label="O nama - About Us" [ngClass]="toggleActiveOnRoute('about')"><p>O nama</p></a>
+                    <a [routerLink]="['/about']" aria-label="O nama - About Us" [ngClass]="toggleActiveOnRoute('about')" title="Learn more About Us" (click)="closeNavSidebar()"><p>O nama</p></a>
                 </li>
                 <li>
-                    <a [routerLink]="['/contact']" aria-label="Kontakt - Contact" [ngClass]="toggleActiveOnRoute('contact')"><p>Kontakt</p></a>
+                    <a [routerLink]="['/contact']" aria-label="Kontakt - Contact" [ngClass]="toggleActiveOnRoute('contact')" title="Get in Touch with Us" (click)="closeNavSidebar()"><p>Kontakt</p></a>
                 </li>
             </ul>
         </div>

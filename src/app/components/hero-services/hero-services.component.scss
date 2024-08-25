@@ -8,6 +8,7 @@
     overflow: hidden;
     padding: 0px 32px;
     box-sizing: border-box;
+    padding-top: 60px;
 }
 
 .hero-services {
@@ -19,7 +20,8 @@
     flex-direction: column;
 
     h2 {
-        margin: 40px 0px;
+        margin-top: 0;
+        margin-bottom: 40px;
     }
 }
 
@@ -92,6 +94,10 @@
             
 
 @media only screen and (max-width: 760px) {
+        .hero-services__container {
+            padding-top: 40px;
+        }
+
         .hero-services {
             align-items: center;
         }

@@ -1,0 +1,33 @@
+@use "../../styles/" as *;
+
+.web-info__container {
+    @include flexCenter();
+    background-color: black;
+    height: fit-content;
+    padding: 8px 0px;
+    box-sizing: border-box
+}
+
+.web-info-tab {
+    @include flexCenter();
+    width: 100%;
+    max-width: 1440px;
+    justify-content: center;
+    column-gap: 40px;
+    height: fit-content;
+
+    p {
+        margin: 0;
+        color: $grayish-blue;
+        font-size: 12px
+    }
+}
+
+.web-info {
+    @include flexCenter();
+}
+
+.county-image {
+    height: 28px;
+    width: 28px;
+}

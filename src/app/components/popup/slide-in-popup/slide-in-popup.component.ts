@@ -28,7 +28,11 @@ export class SlideInPopupComponent {
             // remove popup after 3 seconds if the user doesnt close it
             setTimeout(() => {
               if (this.isVisible) popupElement.classList.remove('show');
-            }, 3000); 
+              setTimeout(() => {
+                this.close();
+              }, 500); 
+            }, 3000);
+
           }
         }, 100); 
       }
@@ -37,7 +41,6 @@ export class SlideInPopupComponent {
         if (popupElement) {
           popupElement.classList.remove('show');
         }
-        
       }
     })
   }

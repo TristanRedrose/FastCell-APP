@@ -27,9 +27,8 @@ export class FooterComponent {
     this.sidebarService.isVisible(this.sidebarKey).subscribe(isVisible => this.menuIsOpen = isVisible);
   }
 
-  goToPage(page: string): void {
-    this.navigationService.goToPage(page);
-    if (this.menuIsOpen) this.sidebarService.toggleSidebar(this.sidebarKey);
+  closeNavSidebar(): void {
+    if (this.menuIsOpen) this.sidebarService.closeSidebar('nav-sidebar');
   }
   
   toggleActiveOnRoute(route: string): string {

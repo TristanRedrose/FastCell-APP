@@ -15,8 +15,10 @@
     @include flexCenter();
     flex-direction: column;
     margin-bottom: 60px;
+    padding-top: 60px;
 
     h2 {
+        margin-top: 0;
         margin-bottom: 70px
     }
 }
@@ -43,8 +45,16 @@
 .hero-shop-text__container {
     max-width: 800px;
 
-    h4 {
+    h4, h3 {
         font-weight: 600;
+    }
+
+    h4 {
+        width: fit-content;
+        background: $base-gradient; 
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     ul {
@@ -57,8 +67,9 @@
             margin-bottom: 8px;
             line-height: 1.6rem;
 
-            h5 {
+            p {
                 margin: 0;
+                line-height: 1.5;
             }
             
             h4 {
@@ -115,6 +126,7 @@
         @include flexCenter();
         flex-direction: column;
         margin-bottom: 60px;
+        padding-top: 40px;
 
         h2 {
             margin-bottom: 48px

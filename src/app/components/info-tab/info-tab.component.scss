@@ -1,0 +1,80 @@
+@use "../../styles/" as *;
+
+.info-tab__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark-blue;
+    height: fit-content;
+    padding: 8px 0px;
+}
+
+.tab-info__list {
+    list-style-type: none;
+    @extend .public-sans-light;
+    color: $very-light-gray;
+    padding: 0;
+    display: flex;
+    column-gap: 40px;
+    margin: 0;
+
+    li {
+
+        a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 8px;
+
+            &:hover {
+                p {
+                    color: $lime-green;
+                }
+            }
+            
+            p {
+                margin: 0;
+                color: $very-light-gray;
+                transition: 0.3s ease-in;
+
+            }
+        }
+    }
+}
+
+.tab-info-image {
+    height: 24px;
+    width: 24px;
+}
+
+@media only screen and (max-width:760px) {
+    .tab-info-image {
+        height: 16px;
+        width: 16px;
+    }
+    
+    .tab-info__list {
+        column-gap: 24px;
+    }
+}
+
+@media only screen and (max-width:760px) {
+    .tab-info-image {
+        height: 24px;
+        width: 24px;
+    }
+
+    .tab-info__list {
+        column-gap: 40px;
+
+        li {
+            a {
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+}

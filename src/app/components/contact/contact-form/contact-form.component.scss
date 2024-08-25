@@ -10,7 +10,7 @@
     border-radius: 12px;
     box-sizing: border-box;
 
-    input[type="text"] {
+    input[type="text"], input[type="email"] {
         border-radius: 4px;
         border: 1px solid rgba($dark-blue, 0.4);
         height: 40px;
@@ -232,7 +232,7 @@ input[type="submit"] {
     .contact-form {
         width: 450px;
 
-        input[type=text], textarea {
+        input[type=text], input[type=email], textarea {
             font-size: 14px;
         }
     }
@@ -252,7 +252,7 @@ input[type="submit"] {
     .contact-form {
         width: 325px;
 
-        input[type=text], textarea {
+        input[type=text], input[type=email], textarea {
             font-size: 12px;
         }
     }
