@@ -9,12 +9,14 @@
 }
 
 .web-info-tab {
-    @include flexCenter();
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     max-width: 1440px;
-    justify-content: center;
     column-gap: 40px;
     height: fit-content;
+    padding-right: 40px;
 
     p {
         margin: 0;
@@ -30,4 +32,11 @@
 .county-image {
     height: 28px;
     width: 28px;
+}
+
+@media only screen and (max-width:760px) {
+    .web-info-tab {
+        justify-content: center;
+        column-gap: 20px;
+    }
 }
