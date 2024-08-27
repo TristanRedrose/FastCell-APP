@@ -16,17 +16,21 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-
-        div {
-            height: 100%;
-        }
     }
 }
 
-.logo-image {
-    width: 32px;
+.logo-div {
+    width: 48px;
     height: 48px;
+    border-radius: 50%;
+    background: $base-gradient;
     margin-right: 12px;
+    @include flexCenter();
+}
+
+.logo-image {
+    width: 50%;
+    height: 70%;
 }
 
 .social-container {
@@ -178,10 +182,15 @@
         width: fit-content;
     }
 
+    .logo-div {
+        width: 40px;
+        height: 40px;
+        margin-right: 0px;
+    }
+    
     .logo-image {
-        width: 28px;
-        height: 44px;
-        margin-right: 0;
+        width: 50%;
+        height: 70%;
     }
 
     .info-image {

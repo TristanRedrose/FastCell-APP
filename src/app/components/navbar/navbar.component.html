@@ -1,7 +1,7 @@
 <div class="navbar-container">
     <nav class="navbar" aria-label="Main Navigation">
-        <div class="nav-logo__container" (click)="goToPage('')" role="button" aria-label="Go to home page">
-            <img class="logo-image" src="/assets/images/CellLogo.webp" alt="Mobitronic Service Logo">
+        <div class="nav-logo__container" [routerLink]="['']" (click)="closeNavSidebar()" role="button" aria-label="Go to home page">
+            <img class="logo-image" src="/assets/images/logo.png" alt="Mobitronic Service Logo">
             <h2>Mobitronic service</h2>
         </div>
         <ul class="navbar-links" role="menu">

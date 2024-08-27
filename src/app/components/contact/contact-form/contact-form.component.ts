@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { noWhitespaceValidator } from '../../../validators/noWhitespace.validator';
 import { PopupService } from '../../../services/popup/popup.service';
+import { EmailService } from '../../../services/email/email.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,7 +15,7 @@ import { PopupService } from '../../../services/popup/popup.service';
 
 export class ContactFormComponent {
 
-  constructor(private popupService: PopupService) {
+  constructor(private popupService: PopupService, private emailService: EmailService) {
 
   }
 
@@ -39,8 +40,25 @@ export class ContactFormComponent {
     }
 
     console.log(contactFormInfo);
-    this.popupService.openPopup();
-    this.contactForm.reset();
+
+    const subject = `Upit kontakt obrasca - Mobitronic service`;
+    const html = `
+    <h3>Šalje: ${contactFormInfo.firstName} ${contactFormInfo.lastName}</h3>
+    <h3>Email: ${contactFormInfo.email}</h3>
+    <p>${contactFormInfo.message}</p>
+    `
+
+    this.emailService.sendEmail(subject, html).subscribe({
+      next: (response) => {
+        console.log('Email sent successfully:', response);
+        this.popupService.openPopup();
+        this.contactForm.reset();
+      },
+      error: (error) => {
+        console.error('Error sending email:', error);
+        alert('Failed to send email.');
+      }
+    });
   }
 
   get firstName(): FormControl<string | null> {

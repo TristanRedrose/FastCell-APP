@@ -51,4 +51,11 @@ export class NavbarComponent {
       this.toggleSidebar();
     }
   }
+
+  closeNavSidebar(): void {
+    if (this.menuIsOpen) this.sidebarService.closeSidebar('nav-sidebar');
+    window.scroll(
+      {top: 0,left:0}
+    );
+  }
 }
