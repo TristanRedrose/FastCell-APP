@@ -166,6 +166,7 @@
         li {
             p {
                 margin: 0;
+                line-height: 1rem;
             }
         }
     }
@@ -197,12 +198,5 @@
         height: 16px;
         width: 16px;
         margin-right: 12px;
-    }
-}
-
-@media only screen and (max-width: 440px) {
-    .logo-image {
-        width: 24px;
-        height: 40px;
     }
 }

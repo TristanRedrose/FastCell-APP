@@ -79,11 +79,22 @@
     .contact-info {
         margin-top: 40px;
         height: 275px;
+        row-gap: 10px;
     }
 
     .bulletin-logo__container {
         width: 44px;
         height: 44px;
+    }
+
+    .bulletin-text__container {
+        h4 {
+            line-height: 1.4rem;
+        }
+    
+        p {
+            line-height: 1.2rem;
+        }
     }
 }
 

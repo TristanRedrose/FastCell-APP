@@ -23,7 +23,7 @@ export class IntersectionTriggerDirective implements AfterViewInit, OnDestroy {
           });
         },
         {
-          threshold: 0.4,
+          threshold: 0.25,
         }
       );
   
