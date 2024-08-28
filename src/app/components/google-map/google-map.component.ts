@@ -17,11 +17,29 @@ export class GoogleMapComponent {
     mapId: environment.maps_ID,
     center: this.myLocation,
     zoom: 16,
+    disableDefaultUI: true,
   };
 
+  createImgDiv(): HTMLDivElement | undefined {
+    if (typeof window !== 'undefined') {
+      let imgTag = document.createElement("div");
+      imgTag.className = "custom-pin__container";
+
+      imgTag.innerHTML = `
+        <img src="assets/icons/logo-pin.png" class="custom-pin" alt="Google map store pin" style="height:48px; width:48px">
+      `;
+
+      return imgTag;
+    }
+    
+    return;
+  }
+
+  
   markerOptions: google.maps.marker.AdvancedMarkerElementOptions = {
     position: this.myLocation,
-    title: "Mobitronic servis d.o.o",
+    title: "Mobitronic servis d.o.o.",
+    content: this.createImgDiv(),
   }
   
 }

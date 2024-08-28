@@ -170,3 +170,10 @@
         margin-bottom: 32px;
     }
 }
+
+@media only screen and (max-width:480px) {
+    .hero-banner-image__mobile {
+        top: 0;
+    }
+
+}

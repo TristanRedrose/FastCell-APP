@@ -88,6 +88,9 @@
         @include flexCenter();
         flex-direction: column;
         
+        h4 {
+            margin: 0 0 8px 0;
+        }
     }
 
     .about-section-image__container {
