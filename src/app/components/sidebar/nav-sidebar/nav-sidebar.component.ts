@@ -30,5 +30,8 @@ export class NavSidebarComponent {
 
   closeNavSidebar() {
     this.sidebarService.closeSidebar('nav-sidebar');
+    window.scroll(
+      {top: 0,left:0}
+    );
   }
 }
