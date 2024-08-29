@@ -32,6 +32,8 @@ export class ContactFormComponent {
       return
     }
 
+    this.contactForm.disable();
+
     let contactFormInfo = {
       firstName: this.firstName.value!.trim(),
       lastName: this.lastName.value!.trim(),
@@ -46,17 +48,19 @@ export class ContactFormComponent {
     <h3>Šalje: ${contactFormInfo.firstName} ${contactFormInfo.lastName}</h3>
     <h3>Email: ${contactFormInfo.email}</h3>
     <p>${contactFormInfo.message}</p>
-    `
+    `;
 
     this.emailService.sendEmail(subject, html).subscribe({
       next: (response) => {
         console.log('Email sent successfully:', response);
         this.popupService.openPopup('Poruka uspješno poslana.', false);
+        this.contactForm.enable();
         this.contactForm.reset();
       },
       error: (error) => {
         console.error('Error sending mail:', error);
         this.popupService.openPopup('Greška prilikom slanja poruke', true);
+        this.contactForm.enable();
       }
     });
   }
