@@ -1,6 +1,6 @@
-<div #popupElement class="popup" *ngIf="isVisible">
-    <button class="close-popup" (click)="close()">X</button>
+<div #popupElement class="popup" *ngIf="isVisible" [ngStyle]="{'background-color': popupColor}">
+    <button class="close-popup" (click)="close()" [ngStyle]="{'background-color': popupColor}">X</button>
     <div class="popup-content">
-      <ng-content></ng-content>
+      <h5 class="popup-text">{{popupText}}</h5>
     </div>
 </div>

@@ -51,12 +51,12 @@ export class ContactFormComponent {
     this.emailService.sendEmail(subject, html).subscribe({
       next: (response) => {
         console.log('Email sent successfully:', response);
-        this.popupService.openPopup();
+        this.popupService.openPopup('Poruka uspješno poslana.', false);
         this.contactForm.reset();
       },
       error: (error) => {
-        console.error('Error sending email:', error);
-        alert('Failed to send email.');
+        console.error('Error sending mail:', error);
+        this.popupService.openPopup('Greška prilikom slanja poruke', true);
       }
     });
   }

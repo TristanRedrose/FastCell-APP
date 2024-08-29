@@ -11,10 +11,24 @@ import { CommonModule } from '@angular/common';
 })
 export class SlideInPopupComponent {
   isVisible: boolean = false;
+  popupText:string = '';
+  popupColor: string = 'hsl(136, 65%, 51%)';
 
   constructor(private popupService: PopupService) {}
 
   ngOnInit() {
+    this.popupService.popupError.subscribe(isError => {
+      if (!isError) {
+        this.popupColor = 'hsl(136, 65%, 51%)';
+        return;
+      }
+      this.popupColor = '#ed4337';
+    })
+
+    this.popupService.popupText.subscribe(text => {
+      this.popupText = text;
+    })
+
     this.popupService.popupState.subscribe(isVisible => {
       this.isVisible = isVisible;
       if (typeof window === 'undefined') return;

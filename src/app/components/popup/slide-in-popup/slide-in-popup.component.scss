@@ -7,7 +7,6 @@
     transform: translate(50%, 10%);
     width: fit-content;
     border-radius: 8px;
-    background-color: $lime-green;
     color: $white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: right 0.5s ease-out, opacity 0.5s ease-out;
@@ -24,7 +23,6 @@
     top: 4px;
     right: 8px;
     border: none;
-    background-color: $lime-green;
     cursor: pointer;
     padding: 0;
 
@@ -42,8 +40,19 @@
     padding: 20px;
 }
 
+.popup-text {
+    margin: 0;
+    line-height: 1.2rem;
+}
+
 @media only screen and (max-width: 760px ) {
     .popup-content {
         padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .popup-text {
+        width: 175px;
     }
 }
