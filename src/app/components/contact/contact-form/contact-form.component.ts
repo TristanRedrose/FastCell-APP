@@ -41,8 +41,6 @@ export class ContactFormComponent {
       message: this.message.value!.trim(),
     }
 
-    console.log(contactFormInfo);
-
     const subject = `Upit kontakt obrasca - Mobitronic service`;
     const html = `
     <h3>Šalje: ${contactFormInfo.firstName} ${contactFormInfo.lastName}</h3>

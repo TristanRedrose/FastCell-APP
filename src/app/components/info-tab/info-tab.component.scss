@@ -18,29 +18,28 @@
     column-gap: 40px;
     margin: 0;
 
-    li {
+    a {
+        text-decoration: none;
         @include flexCenter();
 
-        a {
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: 8px;
-
-            &:hover {
-                p {
-                    color: $lime-green;
-                }
-            }
-            
+        &:hover {
             p {
-                margin: 0;
-                color: $very-light-gray;
-                transition: 0.3s ease-in;
-
+                color: $lime-green;
             }
         }
+    }
+
+    li {
+        @include flexCenter();
+        column-gap: 8px;
+        
+        p {
+            margin: 0;
+            color: $very-light-gray;
+            transition: 0.3s ease-in;
+
+        }
+        
     }
 }
 
@@ -57,6 +56,12 @@
     
     .tab-info__list {
         column-gap: 24px;
+
+        li {
+            p {
+                font-size: 10px;
+            }
+        }
     }
 }
 
@@ -69,14 +74,13 @@
     .tab-info__list {
         column-gap: 40px;
 
+        a {
+            align-items: center;
+
         li {
-
-            align-items: flex-start;
-
-            a {
-                flex-direction: column;
-                column-gap: 0;
-                row-gap: 8px;
+            flex-direction: column;
+            column-gap: 0;
+            row-gap: 8px;
 
                 p {
                     font-size: 8px;

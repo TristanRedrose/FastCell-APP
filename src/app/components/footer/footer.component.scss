@@ -76,7 +76,7 @@
     a {
         text-decoration: none;
         color: $very-light-gray;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in;
 
         &:hover {
             color: $lime-green;
@@ -93,7 +93,6 @@
         align-items: center;
         width: fit-content;
         margin-bottom: 16px;
-        transition: 0.3s ease-in-out;
 
         p {
             margin: 0;
@@ -128,6 +127,17 @@
 .grb-image {
     height: 60px;
     width: 60px;
+}
+
+.work-hours {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info-link {
+    width: fit-content;
+    transition: 0.3s ease-in;
+    @include flexCenter();
 }
 
 @media only screen and (max-width: 940px) {
