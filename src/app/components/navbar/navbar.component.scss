@@ -164,6 +164,10 @@
     .hamburger-menu {
         @include flexCenter();
     }
+
+    .navbar {
+        height: 64px;
+    }
 }
 
 @media only screen and (max-width: 440px) {
