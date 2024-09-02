@@ -1,0 +1,50 @@
+.business-info__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.business-info {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h2 {
+    margin-top: 0;
+    align-self: center;
+}
+
+p {
+    line-height: 1.8rem;
+    width: fit-content;
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.info-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width:760px) {
+    .info-text {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2 {
+        align-self: flex-start;
+    }
+
+    p {
+        line-height: 1.6rem;
+    }
+}

@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { AboutUsComponent } from '../../components/about-us/about-us.component';
 import { HeroAboutComponent } from '../../components/hero-about/hero-about.component';
 import { MetaService } from '../../services/meta/meta.service';
+import { BusinessInfoComponent } from '../../components/business-info/business-info.component';
 
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [AboutUsComponent,
-    HeroAboutComponent
+    HeroAboutComponent,
+    BusinessInfoComponent
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
